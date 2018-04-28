@@ -4,39 +4,39 @@
       <div class="logo"><span>{{website.website_name}}</span></div>
       <Menu-item name="/">
         <Icon type="home"></Icon>
-        Home
+        主页
       </Menu-item>
       <Menu-item name="/problems">
         <Icon type="ios-keypad"></Icon>
-        Problems
+        题目
       </Menu-item>
       <Menu-item name="/contests">
         <Icon type="trophy"></Icon>
-        Contests
+        比赛
       </Menu-item>
       <Menu-item name="/status">
         <Icon type="ios-pulse-strong"></Icon>
-        Status
+        状态
       </Menu-item>
       <Submenu name="">
         <template slot="title">
           <Icon type="podium"></Icon>
-          Rank
+          排名
         </template>
         <Menu-item name="/acm-rank">
-          ACM Rank
+          ACM 排名
         </Menu-item>
         <Menu-item name="/oi-rank">
-          OI Rank
+          OI 排名
         </Menu-item>
       </Submenu>
       <Submenu name="">
         <template slot="title">
           <Icon type="information-circled"></Icon>
-          About
+          关于
         </template>
         <Menu-item name="/about">
-          Judger
+          评测环境
         </Menu-item>
         <Menu-item name="/FAQ">
           FAQ
@@ -47,13 +47,13 @@
           <Button type="ghost"
                   ref="loginBtn"
                   shape="circle"
-                  @click="handleBtnClick('login')">Login
+                  @click="handleBtnClick('login')">登陆
           </Button>
           <Button v-if="website.allow_register"
                   type="ghost"
                   shape="circle"
                   @click="handleBtnClick('register')"
-                  style="margin-left: 5px;">Register
+                  style="margin-left: 5px;">注册
           </Button>
         </div>
       </template>
