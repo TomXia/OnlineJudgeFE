@@ -130,7 +130,7 @@
       <Card id="info">
         <div slot="title" class="header">
           <Icon type="information-circled"></Icon>
-          <span class="card-title">Information</span>
+          <span class="card-title">题目信息</span>
         </div>
         <ul>
           <li><p>ID</p>
