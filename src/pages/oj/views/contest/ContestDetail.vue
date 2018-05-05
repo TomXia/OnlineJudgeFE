@@ -21,9 +21,9 @@
               <div v-html="contest.description" class="markdown-body"></div>
               <div v-if="passwordFormVisible" class="contest-password">
                 <Input v-model="contestPassword" type="password"
-                       placeholder="contest password" class="contest-password-input"
+                       placeholder="请输入密码" class="contest-password-input"
                        @on-enter="checkPassword"/>
-                <Button type="info" @click="checkPassword">Enter</Button>
+                <Button type="info" @click="checkPassword">提交</Button>
               </div>
             </Panel>
             <Table :columns="columns" :data="contest_table" disabled-hover style="margin-bottom: 40px;"></Table>
@@ -37,39 +37,39 @@
         <VerticalMenu-item :disabled="contestMenuDisabled"
                            :route="{name: 'contest-problem-list', params: {contestID: contestID}}">
           <Icon type="ios-photos"></Icon>
-          Problems
+          题目
         </VerticalMenu-item>
 
         <VerticalMenu-item :disabled="contestMenuDisabled"
                            :route="{name: 'contest-announcement-list', params: {contestID: contestID}}">
           <Icon type="chatbubble-working"></Icon>
-          Announcements
+          公告
         </VerticalMenu-item>
 
         <VerticalMenu-item v-if="OIContestRealTimePermission"
                            :disabled="contestMenuDisabled"
                            :route="{name: 'contest-submission-list'}">
           <Icon type="navicon-round"></Icon>
-          Submissions
+          提交
         </VerticalMenu-item>
 
         <VerticalMenu-item v-if="OIContestRealTimePermission"
                            :disabled="contestMenuDisabled"
                            :route="{name: 'contest-rank', params: {contestID: contestID}}">
           <Icon type="stats-bars"></Icon>
-          Rankings
+          排名
         </VerticalMenu-item>
 
         <VerticalMenu-item :route="{name: 'contest-details', params: {contestID: contestID}}">
           <Icon type="home"></Icon>
-          Overview
+          总览
         </VerticalMenu-item>
 
         <VerticalMenu-item v-if="showAdminHelper"
                            :route="{name: 'acm-helper', params: {contestID: contestID}}">
           <Icon type="ios-paw"></Icon>
-          Admin Helper
-        </VerticalMenu-item>
+          管理员帮助
+          </VerticalMenu-item>
       </VerticalMenu>
     </div>
   </div>
