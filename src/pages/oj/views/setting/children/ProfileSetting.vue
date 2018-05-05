@@ -1,6 +1,6 @@
 <template>
   <div class="setting-main">
-    <div class="section-title">Avatar Setting</div>
+    <div class="section-title">头像</div>
     <template v-if="!avatarOption.imgSrc">
       <Upload type="drag"
               class="mini-container"
@@ -9,7 +9,7 @@
               :before-upload="handleSelectFile">
         <div style="padding: 30px 0">
           <Icon type="ios-cloud-upload" size="52" style="color: #3399ff"></Icon>
-          <p>Drop  here, or click to select manually</p>
+          <p>点击来选择图片或将图片拖放至此</p>
         </div>
       </Upload>
     </template>
@@ -54,37 +54,37 @@
     <Modal v-model="uploadModalVisible"
            title="Upload the avatar">
       <div class="upload-modal">
-        <p class="notice">Your avatar will be set to:</p>
+        <p class="notice">您的头像将被设置为:</p>
         <img :src="uploadImgSrc"/>
       </div>
       <div slot="footer">
-        <Button @click="uploadAvatar" :loading="loadingUploadBtn">upload</Button>
+        <Button @click="uploadAvatar" :loading="loadingUploadBtn">上传</Button>
       </div>
     </Modal>
 
-    <div class="section-title">Profile Setting</div>
+    <div class="section-title">档案</div>
     <Form ref="formProfile" :model="formProfile">
       <Row type="flex" :gutter="30" justify="space-around">
         <Col :span="11">
-        <FormItem label="Real Name">
+        <FormItem label="真实姓名">
           <Input v-model="formProfile.real_name"/>
         </FormItem>
-        <Form-item label="School">
+        <Form-item label="学校">
           <Input v-model="formProfile.school"/>
         </Form-item>
-        <Form-item label="Major">
+        <Form-item label="专业">
           <Input v-model="formProfile.major"/>
         </Form-item>
         <Form-item>
-          <Button type="primary" @click="updateProfile" :loading="loadingSaveBtn">Save All</Button>
+          <Button type="primary" @click="updateProfile" :loading="loadingSaveBtn">保存</Button>
         </Form-item>
         </Col>
 
         <Col :span="11">
-        <Form-item label="Mood">
+        <Form-item label="个性签名">
           <Input v-model="formProfile.mood"/>
         </Form-item>
-        <Form-item label="Blog">
+        <Form-item label="博客">
           <Input v-model="formProfile.blog"/>
         </Form-item>
         <Form-item label="Github">
