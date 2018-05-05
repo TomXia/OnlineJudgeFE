@@ -1,26 +1,26 @@
 <template>
   <div class="setting-main">
-    <p class="section-title">Sessions</p>
+    <p class="section-title">会话</p>
     <div class="flex-container setting-content">
       <template v-for="session in sessions">
         <Card :padding="20" class="flex-child">
           <span slot="title" style="line-height: 20px">{{session.ip}}</span>
           <div slot="extra">
-            <Tag v-if="session.current_session" color="green">Current</Tag>
+            <Tag v-if="session.current_session" color="green">当前</Tag>
             <Button v-else
                     type="warning"
                     size="small"
-                    @click="deleteSession(session.session_key)">Revoke
+                    @click="deleteSession(session.session_key)">下线
             </Button>
           </div>
           <Form :label-width="100">
-            <FormItem label="OS :" class="item">
+            <FormItem label="系统 :" class="item">
               {{session.user_agent | platform}}
             </FormItem>
-            <FormItem label="Browser :" class="item">
+            <FormItem label="浏览器 :" class="item">
               {{session.user_agent | browser}}
             </FormItem>
-            <FormItem label="Last Activity :" class="item">
+            <FormItem label="最近活动 :" class="item">
               {{session.last_activity | localtime }}
             </FormItem>
           </Form>
@@ -28,13 +28,13 @@
       </template>
     </div>
 
-    <p class="section-title">Two Factor Authentication</p>
+    <p class="section-title">两步验证</p>
     <div class="mini-container setting-content">
       <Form>
         <Alert v-if="TFAOpened"
                type="success"
                class="notice"
-               showIcon>You have enabled two-factor authentication.
+               showIcon>您已开启两步验证功能.
         </Alert>
         <FormItem v-if="!TFAOpened">
           <div class="oj-relative">
@@ -44,17 +44,17 @@
         </FormItem>
         <template v-if="!loadingQRcode">
           <FormItem style="width: 250px">
-            <Input v-model="formTwoFactor.code" placeholder="Enter the code from your application"/>
+            <Input v-model="formTwoFactor.code" placeholder="输入您应用显示的代码"/>
           </FormItem>
           <Button type="primary"
                   :loading="loadingBtn"
                   @click="updateTFA(false)"
-                  v-if="!TFAOpened">Open TFA
+                  v-if="!TFAOpened">开启两步验证
           </Button>
           <Button type="error"
                   :loading="loadingBtn"
                   @click="closeTFA"
-                  v-else>Close TFA
+                  v-else>关闭两步验证
           </Button>
         </template>
       </Form>
