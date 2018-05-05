@@ -1,17 +1,17 @@
 <template>
   <div>
     <Panel>
-      <div slot="title">Problems List</div>
+      <div slot="title">题目列表</div>
       <Table v-if="contestRuleType == 'ACM' || OIContestRealTimePermission"
              :columns="ACMTableColumns"
              :data="problems"
              @on-row-click="goContestProblem"
-             no-data-text="No Problems"></Table>
+             no-data-text="无题目"></Table>
       <Table v-else
              :data="problems"
              :columns="OITableColumns"
              @on-row-click="goContestProblem"
-             no-data-text="No Problems"></Table>
+             no-data-text="无题目"></Table>
     </Panel>
   </div>
 </template>
