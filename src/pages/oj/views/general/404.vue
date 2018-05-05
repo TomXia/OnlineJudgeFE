@@ -3,7 +3,7 @@
     <div class="error404-body-con">
       <Card>
         <div class="error404-body-con-title">4<span><Icon type="ios-navigate-outline"></Icon></span>4</div>
-        <p class="error404-body-con-message">YOU&nbsp;&nbsp;LOOK&nbsp;&nbsp;LOST</p>
+        <p class="error404-body-con-message">The&nbsp;&nbsp;PAGE&nbsp;&nbsp;IS&nbsp;&nbsp;MISSING</p>
         <div class="error404-btn-con">
           <Button @click="goHome" size="large" style="width: 200px;" type="ghost">Go Home</Button>
           <Button @click="backPage" size="large" style="width: 200px;margin-left: 40px;" type="primary">Back</Button>
