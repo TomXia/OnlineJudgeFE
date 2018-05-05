@@ -16,29 +16,29 @@
 
         <div class="flex-container">
           <div class="left">
-            <p>Solved</p>
+            <p>已通过</p>
             <p class="emphasis">{{profile.accepted_number}}</p>
           </div>
           <div class="middle">
-            <p>Submissions</p>
+            <p>已提交</p>
             <p class="emphasis">{{profile.submission_number}}</p>
           </div>
           <div class="right">
-            <p>Score</p>
+            <p>分数</p>
             <p class="emphasis">{{profile.total_score}}</p>
           </div>
         </div>
         <div id="problems">
-          <div v-if="problems.length">List of solved problems
+          <div v-if="problems.length">通过题目列表
             <Poptip v-if="refreshVisible" trigger="hover" placement="right-start">
               <Icon type="ios-help-outline"></Icon>
               <div slot="content">
-                <p>If you find the following problem id does not exist,<br> try to click the button.</p>
-                <Button type="info" @click="freshProblemDisplayID">regenerate</Button>
+                <p>如果题目id出现问题，点击来重新生成id。</p>
+                <Button type="info" @click="freshProblemDisplayID">重新生成</Button>
               </div>
             </Poptip>
           </div>
-          <p v-else>The guy is so lazy that has not solved any problem yet.</p>
+          <p v-else>无已通过问题.</p>
           <div class="btns">
             <div class="problem-btn" v-for="problemID in problems">
               <Button type="ghost" @click="goProblem(problemID)">{{problemID}}</Button>
