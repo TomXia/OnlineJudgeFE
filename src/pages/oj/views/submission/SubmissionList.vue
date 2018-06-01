@@ -63,46 +63,7 @@
           username: ''
         },
         columns: [
-          {
-            title: 'When',
-            align: 'center',
-            render: (h, params) => {
-              return h('span', time.utcToLocal(params.row.create_time))
-            }
-          },
-          {
-            title: 'ID',
-            align: 'center',
-            render: (h, params) => {
-              if (params.row.show_link) {
-                return h('span', {
-                  style: {
-                    color: '#57a3f3',
-                    cursor: 'pointer'
-                  },
-                  on: {
-                    click: () => {
-                      this.$router.push('/status/' + params.row.id)
-                    }
-                  }
-                }, params.row.id.slice(0, 12))
-              } else {
-                return h('span', params.row.id.slice(0, 12))
-              }
-            }
-          },
-          {
-            title: 'Status',
-            align: 'center',
-            render: (h, params) => {
-              return h('Tag', {
-                props: {
-                  color: JUDGE_STATUS[params.row.result].color
-                }
-              }, JUDGE_STATUS[params.row.result].name)
-            }
-          },
-          {
+		  {
             title: 'Problem',
             align: 'center',
             render: (h, params) => {
@@ -130,6 +91,27 @@
             }
           },
           {
+            title: 'ID',
+            align: 'center',
+            render: (h, params) => {
+              if (params.row.show_link) {
+                return h('span', {
+                  style: {
+                    color: '#57a3f3',
+                    cursor: 'pointer'
+                  },
+                  on: {
+                    click: () => {
+                      this.$router.push('/status/' + params.row.id)
+                    }
+                  }
+                }, params.row.id.slice(0, 12))
+              } else {
+                return h('span', params.row.id.slice(0, 12))
+              }
+            }
+          },
+		  {
             title: 'Time',
             align: 'center',
             render: (h, params) => {
@@ -148,7 +130,7 @@
             align: 'center',
             key: 'language'
           },
-          {
+		  {
             title: 'Author',
             align: 'center',
             render: (h, params) => {
@@ -167,6 +149,24 @@
                   }
                 }
               }, params.row.username)
+            }
+          },
+          {
+            title: 'Status',
+            align: 'center',
+            render: (h, params) => {
+              return h('Tag', {
+                props: {
+                  color: JUDGE_STATUS[params.row.result].color
+                }
+              }, JUDGE_STATUS[params.row.result].name)
+            }
+          },
+		  {
+            title: 'When',
+            align: 'center',
+            render: (h, params) => {
+              return h('span', time.utcToLocal(params.row.create_time))
             }
           }
         ],
