@@ -297,7 +297,7 @@
       ...mapGetters(['isAuthenticated', 'user']),
       title () {
         if (!this.contestID) {
-          return 'Status'
+          return '评测状态'
         } else if (this.problemID) {
           return 'Problem Submissions'
         } else {
@@ -305,7 +305,7 @@
         }
       },
       status () {
-        return this.formFilter.result === '' ? 'Status' : JUDGE_STATUS[this.formFilter.result].name
+        return this.formFilter.result === '' ? '评测状态' : JUDGE_STATUS[this.formFilter.result].name
       },
       rejudgeColumnVisible () {
         return !this.contestID && this.user.admin_type === USER_TYPE.SUPER_ADMIN
