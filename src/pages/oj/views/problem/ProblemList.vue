@@ -89,7 +89,7 @@
         tagList: [],
         problemTableColumns: [
           {
-            title: '#',
+            title: '题号',
             key: '_id',
             width: 80,
             render: (h, params) => {
@@ -110,7 +110,7 @@
             }
           },
           {
-            title: 'Title',
+            title: '题目名称',
             render: (h, params) => {
               return h('Button', {
                 props: {
@@ -129,7 +129,7 @@
             }
           },
           {
-            title: 'Level',
+            title: '难度',
             render: (h, params) => {
               let t = params.row.difficulty
               let color = 'blue'
@@ -143,11 +143,11 @@
             }
           },
           {
-            title: 'Total',
+            title: '提交次数',
             key: 'submission_number'
           },
           {
-            title: 'AC Rate',
+            title: '通过率',
             render: (h, params) => {
               return h('span', this.getACRate(params.row.accepted_number, params.row.submission_number))
             }
