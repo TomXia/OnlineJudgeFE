@@ -31,7 +31,7 @@
             </li>
 
             <li>
-              <Button type="info" icon="refresh" @click="getSubmissions">Refresh</Button>
+              <Button type="info" icon="refresh" @click="getSubmissions">刷新</Button>
             </li>
           </ul>
         </div>
@@ -63,8 +63,8 @@
           username: ''
         },
         columns: [
-        {
-            title: 'Problem',
+      {
+            title: '题号',
             align: 'center',
             render: (h, params) => {
               return h('span',
@@ -89,9 +89,9 @@
                 },
                 params.row.problem)
             }
-        },
-        {
-            title: 'ID',
+      },
+      {
+            title: '代码',
             align: 'center',
             render: (h, params) => {
               if (params.row.show_link) {
@@ -110,28 +110,28 @@
                 return h('span', params.row.id.slice(0, 12))
               }
             }
-        },
-        {
-            title: 'Time',
+      },
+      {
+            title: '用时',
             align: 'center',
             render: (h, params) => {
               return h('span', utils.submissionTimeFormat(params.row.statistic_info.time_cost))
             }
-        },
-        {
-            title: 'Memory',
+      },
+      {
+            title: '内存',
             align: 'center',
             render: (h, params) => {
               return h('span', utils.submissionMemoryFormat(params.row.statistic_info.memory_cost))
             }
-        },
-        {
-            title: 'Language',
+      },
+      {
+            title: '语言',
             align: 'center',
             key: 'language'
-        },
-        {
-            title: 'Author',
+      },
+      {
+            title: '提交者',
             align: 'center',
             render: (h, params) => {
               return h('a', {
@@ -150,9 +150,9 @@
                 }
               }, params.row.username)
             }
-          },
-          {
-            title: 'Status',
+        },
+        {
+            title: '状态',
             align: 'center',
             render: (h, params) => {
               return h('Tag', {
@@ -161,9 +161,9 @@
                 }
               }, JUDGE_STATUS[params.row.result].name)
             }
-          },
-          {
-            title: 'When',
+        },
+        {
+            title: '时间',
             align: 'center',
             render: (h, params) => {
               return h('span', time.utcToLocal(params.row.create_time))
