@@ -63,7 +63,7 @@
           username: ''
         },
         columns: [
-		  {
+        {
             title: 'Problem',
             align: 'center',
             render: (h, params) => {
@@ -89,8 +89,8 @@
                 },
                 params.row.problem)
             }
-          },
-          {
+        },
+        {
             title: 'ID',
             align: 'center',
             render: (h, params) => {
@@ -110,27 +110,27 @@
                 return h('span', params.row.id.slice(0, 12))
               }
             }
-          },
-		  {
+        },
+        {
             title: 'Time',
             align: 'center',
             render: (h, params) => {
               return h('span', utils.submissionTimeFormat(params.row.statistic_info.time_cost))
             }
-          },
-          {
+        },
+        {
             title: 'Memory',
             align: 'center',
             render: (h, params) => {
               return h('span', utils.submissionMemoryFormat(params.row.statistic_info.memory_cost))
             }
-          },
-          {
+        },
+        {
             title: 'Language',
             align: 'center',
             key: 'language'
-          },
-		  {
+        },
+        {
             title: 'Author',
             align: 'center',
             render: (h, params) => {
@@ -162,7 +162,7 @@
               }, JUDGE_STATUS[params.row.result].name)
             }
           },
-		  {
+          {
             title: 'When',
             align: 'center',
             render: (h, params) => {
