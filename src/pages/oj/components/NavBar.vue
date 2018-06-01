@@ -47,7 +47,7 @@
           <Button type="ghost"
                   ref="loginBtn"
                   shape="circle"
-                  @click="handleBtnClick('login')">登陆
+                  @click="handleBtnClick('login')">登录
           </Button>
           <Button v-if="website.allow_register"
                   type="ghost"
