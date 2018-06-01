@@ -62,7 +62,7 @@
             }
           },
           {
-            title: 'User',
+            title: '用户',
             align: 'center',
             render: (h, params) => {
               return h('a', {
@@ -83,7 +83,7 @@
             }
           },
           {
-            title: 'Total Score',
+            title: '总分',
             align: 'center',
             render: (h, params) => {
               return h('a', {
