@@ -63,7 +63,7 @@
           username: ''
         },
         columns: [
-      {
+          {
             title: '题号',
             align: 'center',
             render: (h, params) => {
@@ -89,8 +89,8 @@
                 },
                 params.row.problem)
             }
-      },
-      {
+          },
+          {
             title: '代码',
             align: 'center',
             render: (h, params) => {
@@ -110,27 +110,27 @@
                 return h('span', params.row.id.slice(0, 12))
               }
             }
-      },
-      {
+          },
+          {
             title: '用时',
             align: 'center',
             render: (h, params) => {
               return h('span', utils.submissionTimeFormat(params.row.statistic_info.time_cost))
             }
-      },
-      {
+          },
+          {
             title: '内存',
             align: 'center',
             render: (h, params) => {
               return h('span', utils.submissionMemoryFormat(params.row.statistic_info.memory_cost))
             }
-      },
-      {
+          },
+          {
             title: '语言',
             align: 'center',
             key: 'language'
-      },
-      {
+          },
+          {
             title: '提交者',
             align: 'center',
             render: (h, params) => {
@@ -150,8 +150,8 @@
                 }
               }, params.row.username)
             }
-        },
-        {
+          },
+          {
             title: '状态',
             align: 'center',
             render: (h, params) => {
@@ -161,8 +161,8 @@
                 }
               }, JUDGE_STATUS[params.row.result].name)
             }
-        },
-        {
+          },
+          {
             title: '时间',
             align: 'center',
             render: (h, params) => {
