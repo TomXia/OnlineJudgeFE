@@ -24,62 +24,62 @@ export default [
   {
     name: 'home',
     path: '/',
-    meta: {title: 'Home'},
+    meta: {title: '首页'},
     component: Home
   },
   {
     name: 'logout',
     path: '/logout',
-    meta: {title: 'Logout'},
+    meta: {title: '退出'},
     component: Logout
   },
   {
     name: 'apply-reset-password',
     path: '/apply-reset-password',
-    meta: {title: 'Apply Reset Password'},
+    meta: {title: '确认重设密码'},
     component: ApplyResetPassword
   },
   {
     name: 'reset-password',
     path: '/reset-password/:token',
-    meta: {title: 'Reset Password'},
+    meta: {title: '找回密码'},
     component: ResetPassword
   },
   {
     name: 'problem-list',
     path: '/problems',
-    meta: {title: 'Problem List'},
+    meta: {title: '题目列表'},
     component: ProblemList
   },
   {
     name: 'problem-details',
     path: '/problem/:problemID',
-    meta: {title: 'Problem Details'},
+    meta: {title: '题目信息'},
     component: Problem
   },
   {
     name: 'submission-list',
     path: '/status',
-    meta: {title: 'Submission List'},
+    meta: {title: '提交列表'},
     component: SubmissionList
   },
   {
     name: 'submission-details',
     path: '/status/:id/',
-    meta: {title: 'Submission Details'},
+    meta: {title: '提交信息'},
     component: SubmissionDetails
   },
   {
     name: 'contest-list',
     path: '/contests',
-    meta: {title: 'Contest List'},
+    meta: {title: '比赛列表'},
     component: Contest.ContestList
   },
   {
     name: 'contest-details',
     path: '/contest/:contestID/',
     component: Contest.ContestDetails,
-    meta: {title: 'Contest Details'},
+    meta: {title: '比赛信息'},
     children: [
       {
         name: 'contest-submission-list',
@@ -129,7 +129,7 @@ export default [
     name: 'user-home',
     path: '/user-home',
     component: UserHome,
-    meta: {requiresAuth: true, title: 'User Home'}
+    meta: {requiresAuth: true, title: '用户首页'}
   },
   {
     path: '/setting',
@@ -138,25 +138,25 @@ export default [
       {
         name: 'default-setting',
         path: '',
-        meta: {requiresAuth: true, title: 'Default Settings'},
+        meta: {requiresAuth: true, title: '默认设置'},
         component: Setting.ProfileSetting
       },
       {
         name: 'profile-setting',
         path: 'profile',
-        meta: {requiresAuth: true, title: 'Profile Settings'},
+        meta: {requiresAuth: true, title: '信息'},
         component: Setting.ProfileSetting
       },
       {
         name: 'account-setting',
         path: 'account',
-        meta: {requiresAuth: true, title: 'Account Settings'},
+        meta: {requiresAuth: true, title: '账户'},
         component: Setting.AccountSetting
       },
       {
         name: 'security-setting',
         path: 'security',
-        meta: {requiresAuth: true, title: 'Security Settings'},
+        meta: {requiresAuth: true, title: '安全'},
         component: Setting.SecuritySetting
       }
     ]
