@@ -70,7 +70,7 @@
             }
           },
           {
-            title: 'User',
+            title: '用户',
             align: 'center',
             render: (h, params) => {
               return h('a', {
@@ -91,7 +91,7 @@
             }
           },
           {
-            title: 'AC / Total',
+            title: '通过数 / 提交数',
             align: 'center',
             width: 100,
             render: (h, params) => {
@@ -111,7 +111,7 @@
             }
           },
           {
-            title: 'TotalTime',
+            title: '总时长',
             align: 'center',
             render: (h, params) => {
               return h('span', this.parseTotalTime(params.row.total_time))
