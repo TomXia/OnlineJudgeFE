@@ -108,7 +108,7 @@
     computed: {
       title () {
         if (this.listVisible) {
-          return this.isContest ? 'Contest Announcements' : 'Announcements'
+          return this.isContest ? '比赛公告栏' : '公告栏'
         } else {
           return this.announcement.title
         }
