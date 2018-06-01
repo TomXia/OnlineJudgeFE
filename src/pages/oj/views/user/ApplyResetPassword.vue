@@ -1,6 +1,6 @@
 <template>
   <Panel :padding="30" class="container">
-    <div slot="title" class="center">Lost Password</div>
+    <div slot="title" class="center">找回密码</div>
     <template v-if="!successApply">
       <Form :rules="ruleResetPassword" :model=formResetPassword ref="formResetPassword">
         <Form-item prop="email">
