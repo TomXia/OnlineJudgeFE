@@ -63,11 +63,11 @@
             <Icon type="arrow-down-b"></Icon>
           </Button>
           <Dropdown-menu slot="list">
-            <Dropdown-item name="/user-home">Home</Dropdown-item>
-            <Dropdown-item name="/status?myself=1">Submissions</Dropdown-item>
-            <Dropdown-item name="/setting/profile">Settings</Dropdown-item>
+            <Dropdown-item name="/user-home">首页</Dropdown-item>
+            <Dropdown-item name="/status?myself=1">提交</Dropdown-item>
+            <Dropdown-item name="/setting/profile">设置</Dropdown-item>
             <Dropdown-item v-if="isAdminRole" name="/admin">Management</Dropdown-item>
-            <Dropdown-item divided name="/logout">Logout</Dropdown-item>
+            <Dropdown-item divided name="/logout">退出</Dropdown-item>
           </Dropdown-menu>
         </Dropdown>
       </template>
