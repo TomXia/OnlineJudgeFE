@@ -1,7 +1,7 @@
 <template>
   <div>
     <panel class="container">
-      <div slot="title">Compiler & Judger</div>
+      <div slot="title">编译器 & 评测机</div>
       <div class="content markdown-body">
         <ul>
           <li v-for="lang in languages">{{lang.name}} ( {{lang.description}} )
@@ -15,20 +15,20 @@
       <div slot="title">Result Explanation</div>
       <div class="content">
         <ul>
-          <li><b>Pending & Juding</b> : You solution will be judged soon, please wait for result</li>
-          <li><b>Compile Error</b> :	Failed to compile your source code. Click on the link to see compiler's output.
+          <li><b>Pending & Juding</b> : 您的提交在队列中, 请耐心等候评测结果</li>
+          <li><b>Compile Error</b> :	您的提交未通过编译, 点击评测链接来查看编译器的输出.
       </li>
-          <li><b>Accepted</b> :	Congratulations. Your solution is correct.</li>
-          <li><b>Wrong Answer</b> :	Your program's output doesn't match judger's answer.</li>
+          <li><b>Accepted</b> :	祝贺,您的提交已通过评测.</li>
+          <li><b>Wrong Answer</b> :	您的提交输出与标准答案不相符.</li>
           <li>
             <b>Runtime Error</b>
-            :	Your program terminated abnormally. Possible reasons are: segment fault, divided by zero or exited with code other than 0.
+            :	您的程序未正常退出. 可能的原因有: 段错误, 除数为0或退出码非0.
           </li>
           <li><b>Time Limit Exceeded</b>
-            :	The CPU time your program used has exceeded limit. Java has a triple time limit.
+            :	您的程序使用的CPU时间超过限制. Java语言会拥有3倍的时间.
           </li>
-          <li><b>Memory Limit Exceeded</b> :	The memory your program actually used has exceeded limit.</li>
-          <li><b>System Error</b> :	Oops, something has gone wrong with the judger. Please report this to administrator.
+          <li><b>Memory Limit Exceeded</b> : 您的程序使用的内存超过限制.</li>
+          <li><b>System Error</b> :	评测机出现内部错误.请与管理员反馈并耐心等待恢复.
           </li>
         </ul>
       </div>
