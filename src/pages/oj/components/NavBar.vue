@@ -30,18 +30,10 @@
           OI 排名
         </Menu-item>
       </Submenu>
-      <Submenu name="">
-        <template slot="title">
-          <Icon type="information-circled"></Icon>
-          关于
-        </template>
-        <Menu-item name="/about">
-          评测环境
-        </Menu-item>
-        <Menu-item name="/FAQ">
-          FAQ
-        </Menu-item>
-      </Submenu>
+      <Menu-item name="/about">
+        <Icon type="information-circled"></Icon>
+        说明
+      </Menu-item>
       <template v-if="!isAuthenticated">
         <div class="btn-menu">
           <Button type="ghost"
