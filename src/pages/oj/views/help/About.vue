@@ -16,6 +16,8 @@
       <div class="content">
         <ul>
           <li><b>Pending & Juding</b> : 您的提交在队列中, 请耐心等候评测结果</li>
+          <li><b>Partial Accepted</b> : 您的提交输出有通过的数据点，但部分与标准答案不符.
+          </li>
           <li><b>Compile Error</b> :	您的提交未通过编译, 点击评测链接来查看编译器的输出.
       </li>
           <li><b>Accepted</b> :	祝贺,您的提交已通过评测.</li>
