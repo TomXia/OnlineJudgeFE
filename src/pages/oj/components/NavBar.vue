@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <Menu theme="light" mode="horizontal" @on-select="handleRoute" :active-name="activeMenu" class="oj-menu">
-      <div class="logo"><img src="../../../assets/logo_beta.svg" height="70"></div>
+      <div class="logo"><img src="../../../assets/blogo.svg" height="70"></div>
       <Menu-item name="/">
         <Icon type="home"></Icon>
         主页
