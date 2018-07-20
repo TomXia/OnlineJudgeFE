@@ -23,11 +23,11 @@
           <Icon type="podium"></Icon>
           排名
         </template>
-        <Menu-item name="/acm-rank">
-          ACM 排名
-        </Menu-item>
         <Menu-item name="/oi-rank">
           OI 排名
+        </Menu-item>
+        <Menu-item name="/acm-rank">
+          ACM 排名
         </Menu-item>
       </Submenu>
       <Menu-item name="/about">
