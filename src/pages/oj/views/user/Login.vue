@@ -1,11 +1,3 @@
-<script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('recaptcha_element', {
-          'sitekey' : '6LfeF3UUAAAAAJErxqZGzXvfJKpcj_4Uw96svccf'
-        });
-      };
-</script>
-
 <template>
   <div>
     <Form ref="formLogin" :model="formLogin" :rules="ruleLogin">
@@ -23,12 +15,6 @@
         <Input v-model="formLogin.tfa_code" placeholder="两步验证码">
         <Icon type="ios-lightbulb-outline" slot="prepend"></Icon>
         </Input>
-      </FormItem>
-      <FormItem prop="recaptcha" v-model="formLogin.recaptcha" placeholder="人机验证" size="large" @on-enter="handleLogin">
-          <div id="recaptcha_element">
-              <script src="https://www.recaptcha.net/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
-              </script>
-          </div>
       </FormItem>
     </Form>
     <div class="footer">
