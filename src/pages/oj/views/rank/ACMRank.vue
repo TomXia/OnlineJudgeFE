@@ -61,7 +61,8 @@
                 }
               }, params.row.user.username)
             }
-          },//mood here
+          },
+          // mood here
           {
             title: '通过数',
             align: 'center',
