@@ -61,7 +61,7 @@
               }, params.row.user.username)
             }
           },
-          // mood here 
+          // mood here
           {
             title: '成绩',
             align: 'center',
