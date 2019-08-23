@@ -61,11 +61,7 @@
               }, params.row.user.username)
             }
           },
-          {
-            title: '个性签名',
-            align: 'center',
-            key: 'mood'
-          },
+          //mood here
           {
             title: '成绩',
             align: 'center',
