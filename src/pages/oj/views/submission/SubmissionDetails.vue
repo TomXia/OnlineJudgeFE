@@ -37,10 +37,10 @@
               type="warning" size="large" @click="shareSubmission(false)">
         UnShare
       </Button>
-      <Button v-else
-              type="primary" size="large" @click="shareSubmission(true)">
-        Share
-      </Button>
+      <!--<Button v-else -->
+      <!--        type="primary" size="large" @click="shareSubmission(true)"> -->
+      <!--  Share -->
+      <!--</Button> -->
     </div>
     </Col>
   </Row>
